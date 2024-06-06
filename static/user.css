@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   
+  font-family: var(--primary-text);
+}
+*::-webkit-scrollbar {
+    width: 13px;
+  }
+ *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 50px;
+    border: 3px solid #ffffff;
+  }
+:root {
+  --primary-color: #f40000;
+  --primary-text: "Poppins";
+  --secondary-text: "Just Another Hand";
+  --box-shadow: 3px 0px 40px 10px hsla(0, 0%, 0%, 0.092);
+}
+body{
+    width: 100%;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav{
+    width: 90%;
+    height: 8vh;
+    /* border: 1px solid var(--primary-color); */
+    box-shadow: var(--box-shadow);
+    display: flex;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li, ul li a{
+    list-style: none;
+    margin: 0px 20px;
+    text-decoration: none;
+}
+nav ul a{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* //interface */
+
+.interface{
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    /* box-shadow: var(--box-shadow); */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+.interface aside{
+    width: 30%;
+    height: 99%;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.interface .account{
+    width: 70%;
+    height: 99%;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account .accContainer{
+    width: 80%;
+    height: 90%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+
+    .info{
+        width: 100%;
+        height: 20vh;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        h2{
+            width: 100%;
+            border: 1px solid hsla(0, 0%, 0%, 0.281);
+            border-radius: 5px;
+            font-weight: 500;
+        }
+    }
+}
+
+.interface aside ul{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.interface aside ul li{
+    width: 97%;
+    height: 8vh;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.interface aside ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    border: 1px solid red;
+    padding: 0;
+    /* margin: 10px 0; */
+    border-radius: 5px ;
+    color: white;
+    background-color: var(--primary-color);
+    margin: 0;
+}
+.interface aside ul li i{
+    margin: 0px 10px;
+}
+
+.account .reservation{
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 80%;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    img{
+            width: 50%;
+    }
+    .info{
+        display: flex;
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 10vh;
+        align-items: center;
+        gap: 10px;
+
+        h3{
+            font-size: 1rem;
+            width: 100%;
+            height: 6vh;
+            display: flex;
+            border-radius: 5px;
+            align-items: center;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+    }
+}

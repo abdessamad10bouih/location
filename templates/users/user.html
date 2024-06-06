@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='user.css') }}"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>{{ username }}</li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+      </ul>
+    </nav>
+
+    <section class="interface">
+      <aside>
+        <ul>
+          <li>
+            <a href="#" onclick="account()" id="acc">
+              <i class="fa-solid fa-user"></i> Account >
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="reserv()" id="rese">
+              <i class="fa-solid fa-car"></i>Reservation >
+            </a>
+          </li>
+          <li>
+            <a href="" id="sett"><i class="fa-solid fa-gear"></i>Settings ></a>
+          </li>
+          <li>
+            <a href="{{ url_for('logout') }}"
+              ><i class="fa-solid fa-right-from-bracket"></i>Logout ></a
+            >
+          </li>
+        </ul>
+
+        <p id="res">
+          <script>
+            const res = document.getElementById("res");
+            res.innerHTML = `@ ${new Date().getFullYear()} All Rights Are reserved`;
+          </script>
+        </p>
+      </aside>
+      <div class="account">
+        <div class="accContainer">
+          <div class="info">
+            <h2>Nom : {{ user_info[1] }}</h2>
+            <h2>Prenom : {{ user_info[2] }}</h2>
+          </div>
+          <div class="info">
+            <h2>Email : {{ user_info[3] }}</h2>
+            <h2>Tel: {{ user_info[4] }}</h2>
+          </div>
+        </div>
+        <div class="reservation">
+          <img src="/{{ reserInfo[8] }}" alt="">
+          <div class="info">
+            <h3>Id reservation : {{ reserInfo[0] }}</h3>
+            <h3>Id Voiture : {{ reserInfo[1] }}</h3>
+          </div>
+          <div class="info">
+            <h3>Email : {{ reserInfo[3] }}</h3>
+            <h3>Username : {{ reserInfo[4] }}</h3>
+          </div>
+          <div class="info">
+            <h3>Etat : {{ reserInfo[6] }}</h3>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+            let accContainer = document.querySelector('.accContainer');
+      let reservation = document.querySelector('.reservation')
+      let acc = document.getElementById('acc')
+
+      acc.addEventListener('click', () =>{
+          accContainer.style.display = "block";
+          reservation.style.display = "none"
+      })
+      function reserv(){
+          accContainer.style.display = "none";
+          reservation.style.display = "block"
+      }
+    </script>
+  </body>
+</html>
